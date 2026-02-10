@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify Clone - Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="main-container">
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+      <div class="logo">
+        <i class="fab fa-spotify"></i>
+        <span>Spotify</span>
+      </div>
+      <ul class="nav">
+        <li><i class="fas fa-home"></i> Home</li>
+        <li><i class="fas fa-search"></i> Search</li>
+        <li><i class="fas fa-book"></i> Your Library</li>
+      </ul>
+      <ul class="playlist-nav">
+        <li>Create Playlist +</li>
+        <li>Liked Songs ❤️</li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="top-nav">
+        <div class="arrows">
+          <i class="fas fa-chevron-left"></i>
+          <i class="fas fa-chevron-right"></i>
+        </div>
+        <h1>Good Afternoon</h1>
+      </div>
+
+      <div class="songs-list">
+        <h2>Popular Songs</h2>
+        <div class="song-grid" id="songList">
+          <!-- Songs will be added by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Player -->
+  <div class="player">
+    <div class="song-info">
+      <img id="cover" src="" alt="cover">
+      <div>
+        <h4 id="title">No song playing</h4>
+        <p id="artist">Artist</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <i class="fas fa-random shuffle"></i>
+      <i class="fas fa-step-backward prev"></i>
+      <i class="fas fa-play-circle play-pause" id="playBtn"></i>
+      <i class="fas fa-step-forward next"></i>
+      <i class="fas fa-redo repeat"></i>
+    </div>
+
+    <div class="progress-container">
+      <span id="currentTime">0:00</span>
+      <input type="range" id="progress" min="0" max="100" value="0">
+      <span id="duration">0:00</span>
+      <i class="fas fa-volume-up volume-icon"></i>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+    </div>
+  </div>
+
+  <audio id="audio"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
